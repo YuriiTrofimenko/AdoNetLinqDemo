@@ -29,13 +29,36 @@ namespace AdoNetLinqDemo
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.authorsDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.authorsDataGridView)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // authorsDataGridView
+            // 
+            this.authorsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.authorsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.authorsDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.authorsDataGridView.Name = "authorsDataGridView";
+            this.authorsDataGridView.RowTemplate.Height = 25;
+            this.authorsDataGridView.Size = new System.Drawing.Size(800, 450);
+            this.authorsDataGridView.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.authorsDataGridView);
+            this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.authorsDataGridView)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView authorsDataGridView;
     }
 }
 

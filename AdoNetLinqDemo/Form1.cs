@@ -12,9 +12,14 @@ namespace AdoNetLinqDemo
 {
     public partial class Form1 : Form
     {
+        private DbContext context;
         public Form1()
         {
             InitializeComponent();
+            this.context = Program.Context;
+            authorsDataGridView.DataSource =
+                this.context.authorsRepository.dataTable;
+            this.context.authorsRepository.Load();
         }
 
     }
