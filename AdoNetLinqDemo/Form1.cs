@@ -20,6 +20,10 @@ namespace AdoNetLinqDemo
             authorsDataGridView.DataSource =
                 this.context.authorsRepository.dataTable;
             this.context.authorsRepository.Load();
+
+            booksDateGridViev.DataSource =
+                this.context.booksRepository.dataTable;
+            this.context.booksRepository.Load();
         }
 
     }
