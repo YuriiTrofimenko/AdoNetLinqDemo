@@ -33,5 +33,10 @@ namespace AdoNetLinqDemo
         {
             this.context.authorsRepository.Save();
         }
+
+        private void saveBooksButton_Click(object sender, EventArgs e)
+        {
+            this.context.booksRepository.Save();
+        }
     }
 }
