@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,15 +17,21 @@ namespace AdoNetLinqDemo
         public Form1()
         {
             InitializeComponent();
+
             this.context = Program.Context;
-            authorsDataGridView.DataSource =
-                this.context.authorsRepository.dataTable;
-            this.context.authorsRepository.Load();
 
             booksDateGridViev.DataSource =
                 this.context.booksRepository.dataTable;
             this.context.booksRepository.Load();
+            
+            authorsDataGridView.DataSource =
+                this.context.authorsRepository.dataTable;
+            this.context.authorsRepository.Load();
         }
 
+        private void saveAuthorsButton_Click(object sender, EventArgs e)
+        {
+            this.context.authorsRepository.Save();
+        }
     }
 }

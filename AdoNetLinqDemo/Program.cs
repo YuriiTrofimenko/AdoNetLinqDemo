@@ -13,7 +13,7 @@ namespace AdoNetLinqDemo
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
-        [STAThread]
+        // [STAThread]
         static void Main()
         {
             context = new DbContext();
@@ -21,6 +21,36 @@ namespace AdoNetLinqDemo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            /* new List<dynamic>() {
+                new { FName = "Bill", LName = "Gates", Age = 65 },
+                new { FName = "John", LName = "Connor", Age = 25 },
+                new { FName = "Sarah", LName = "Connor", Age = 40 },
+                new { FName = "Иван", LName = "Иванович", Age = 61 },
+                new { FName = "Иван", LName = "Степанович", Age = 15 },
+                new { FName = "Иван", LName = "Кузьмич", Age = 30 }
+            }.Where(p => p.Age < 60)
+            .OrderBy(p => p.Age)
+            .Skip(1)
+            .Take(2)
+            .Select(p => $"{p.FName} {p.LName}")
+            // .ToList().ForEach(Console.WriteLine);
+            .ToList().ForEach(p => MessageBox.Show(p)); */
+
+            /* var result = new List<dynamic>() {
+                new { FName = "Bill", LName = "Gates", Age = 65 },
+                new { FName = "John", LName = "Connor", Age = 25 },
+                new { FName = "Sarah", LName = "Connor", Age = 40 },
+                new { FName = "Иван", LName = "Иванович", Age = 61 },
+                new { FName = "Иван", LName = "Степанович", Age = 15 },
+                new { FName = "Иван", LName = "Кузьмич", Age = 30 }
+            }.Where(p => p.Age < 60)
+            .OrderBy(p => p.Age)
+            .Skip(1)
+            .Take(2)
+            .Select(p => $"{p.FName} {p.LName}");
+
+            Console.WriteLine(MessageBox.Show(result.ToString())); */
         }
     }
 }

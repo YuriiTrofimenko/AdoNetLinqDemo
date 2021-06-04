@@ -14,7 +14,7 @@ namespace AdoNetLinqDemo
         public AuthorsRepository authorsRepository;
         public DbContext()
         {
-            this.connection = new SqlConnection(@"Data Source = (localdb)\mssqllocaldb; Initial Catalog = Liblary; Integrated Security = True");
+            this.connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=library;Integrated Security=True");
             this.booksRepository = new BooksRepository(connection);
             this.authorsRepository = new AuthorsRepository(connection);
         }
