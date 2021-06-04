@@ -79,6 +79,7 @@ namespace AdoNetLinqDemo
             this.saveBooksButton.TabIndex = 1;
             this.saveBooksButton.Text = "Save Books";
             this.saveBooksButton.UseVisualStyleBackColor = true;
+            this.saveBooksButton.Click += new System.EventHandler(this.saveBooksButton_Click);
             // 
             // saveAuthorsButton
             // 
